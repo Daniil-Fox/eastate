@@ -145,6 +145,12 @@
 .stages-item {
   flex: 1;
 
+  &:not(:last-child) {
+    @include mobile {
+      margin-bottom: 1rem;
+    }
+  }
+
   &:last-child {
     .stages-item__desc {
       @include mobile {

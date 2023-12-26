@@ -4,7 +4,7 @@
   margin-top: -5rem;
   padding-top: 12rem;
   padding-bottom: 12rem;
-  background-color: #E6E7E8;
+  background-color: #fff;
   border-top-right-radius: 5rem;
   border-top-left-radius: 5rem;
   box-shadow: 0 -2.9rem 7.15rem 0 rgba(223, 223, 223, 0.34), 0 -2.9rem 7.15rem 0 rgba(223, 223, 223, 0.46);
@@ -24,6 +24,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.09;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &::after {
