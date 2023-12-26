@@ -391,6 +391,13 @@ a {
   font-style: normal;
   font-weight: 500;
   line-height: 145%;
+  -webkit-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
+@media (any-hover: hover) {
+  .header__tel:hover {
+    color: var(--accent-color);
+  }
 }
 @media (max-width: 576px) {
   .header__tel {
@@ -398,9 +405,272 @@ a {
   }
 }
 
+.social__link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+}
+@media (any-hover: hover) {
+  .social__link:hover span {
+    color: var(--accent-color);
+  }
+  .social__link:hover svg {
+    stroke: var(--accent-color) !important;
+  }
+}
 .social__link svg {
   width: 4rem;
   height: 4rem;
+  -webkit-transition: stroke 0.3s ease-out;
+  transition: stroke 0.3s ease-out;
+}
+.social__link span {
+  color: #FFF;
+  font-family: "Montserrat";
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 145%;
+  -webkit-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
+
+.menu {
+  position: fixed;
+  z-index: 99;
+  inset: 0;
+  background-image: url("./../img/hero-bg.webp");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+.menu::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(112, 118, 122, 0.92);
+}
+.menu__close {
+  position: absolute;
+  z-index: 5;
+  width: 5.5rem;
+  height: 5.5rem;
+  top: 7rem;
+  right: 16.5rem;
+  padding: 1.7rem;
+  border-radius: 100%;
+  border: 0.1rem solid #fff;
+}
+@media (max-width: 576px) {
+  .menu__close {
+    width: 4.8rem;
+    height: 4.8rem;
+    top: 5.5rem;
+    right: 3rem;
+  }
+}
+.menu__close::before, .menu__close::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  width: 2.4rem;
+  height: 0.1rem;
+  background-color: #fff;
+}
+@media (max-width: 576px) {
+  .menu__close::before, .menu__close::after {
+    width: 2rem;
+  }
+}
+.menu__close::before {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.menu__close::after {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.menu__window {
+  position: relative;
+  z-index: 5;
+  padding-top: 10%;
+}
+.menu__logo {
+  color: #FFF;
+  font-family: "Montserrat";
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.menu__desc {
+  max-width: unset;
+}
+.menu__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 576px) {
+  .menu__container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+.menu__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+@media (max-width: 576px) {
+  .menu__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: left;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+}
+.menu__name {
+  width: 54rem;
+  height: 19rem;
+  margin-bottom: 5rem;
+}
+.menu__name img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+@media (max-width: 576px) {
+  .menu__name {
+    display: none;
+  }
+}
+.menu__add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+@media (max-width: 576px) {
+  .menu__add {
+    display: none;
+  }
+}
+.menu__add--mob {
+  display: none;
+}
+@media (max-width: 576px) {
+  .menu__add--mob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 5.2rem;
+  }
+}
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0 7rem;
+}
+@media (max-width: 576px) {
+  .nav__list {
+    padding: 0;
+    margin-bottom: 2.7rem;
+  }
+}
+.nav__item {
+  text-align: center;
+  padding: 4.3rem 7rem;
+  position: relative;
+}
+@media (max-width: 576px) {
+  .nav__item {
+    padding: 2.8rem 10rem;
+  }
+}
+.nav__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-image: url("./../img/separator.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.nav__link {
+  color: #FFF;
+  font-family: "Montserrat";
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 145%;
+  -webkit-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
+@media (max-width: 576px) {
+  .nav__link {
+    font-size: 1.8rem;
+  }
+}
+@media (any-hover: hover) {
+  .nav__link:hover {
+    color: var(--accent-color);
+  }
+}
+.nav__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 .hero {

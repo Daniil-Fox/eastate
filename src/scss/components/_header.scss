@@ -84,6 +84,11 @@
     font-style: normal;
     font-weight: 500;
     line-height: 145%;
+    transition: color .3s ease-out;
+
+    @include hover {
+      color: var(--accent-color);
+    }
 
     @include mobile {
       display: none;
@@ -93,9 +98,37 @@
 
 .social {
   &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 2rem;
+
+    @include hover {
+      span {
+        color: var(--accent-color);
+      }
+
+      svg {
+        stroke: var(--accent-color) !important;
+      }
+    }
+
     svg {
       width: 4rem;
       height: 4rem;
+      transition: stroke .3s ease-out;
+    }
+
+    span {
+      color: #FFF;
+      font-family: 'Montserrat';
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 145%;
+
+      transition: color .3s ease-out;
+
+
     }
   }
 }

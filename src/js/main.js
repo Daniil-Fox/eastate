@@ -18,3 +18,23 @@ if(window.matchMedia('(min-width: 769px)').matches){
     progressLine.style.height = `${per}%`
   }
 }
+
+
+const menu = document.querySelector('.menu')
+const burger = document.querySelector('.header__burger')
+const closeBtn = document.querySelector('.menu__close')
+const header = document.querySelector('.header')
+const heroHeader = document.querySelector('.hero__nav')
+burger.addEventListener('click', e => {
+  e.preventDefault()
+  menu.style.transform = 'translateX(0)'
+  header.style.display = 'none'
+  document.body.style.overflow = 'hidden'
+})
+
+closeBtn.addEventListener('click', e => {
+  e.preventDefault()
+  menu.style.transform = null
+  header.style.display = null
+  document.body.style.overflow = null
+})
