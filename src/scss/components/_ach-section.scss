@@ -1,0 +1,213 @@
+.ach-section {
+  position: relative;
+  padding-bottom: 12rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    padding: 3rem 7rem;
+    background-color: #fff;
+    box-shadow: 0 0 2.35rem .2rem rgba(0, 0, 0, 0.08);
+    max-width: 83.2rem;
+
+    @include mobile {
+      padding: 4rem 2.5rem;
+    }
+
+    &::before {
+      content: "2023";
+      position: absolute;
+      z-index: -2;
+      left: -6.5rem;
+      top: -15.5rem;
+      color: #D3BC80;
+      font-family: "Inter";
+      font-size: 20rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 124.2%;
+      letter-spacing: 2.2rem;
+      text-transform: uppercase;
+
+      @include mobile {
+        font-size: 9.6rem;
+        letter-spacing: 1.056rem;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -8.1rem;
+      }
+    }
+  }
+
+  &__gal {
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    width: 69rem;
+    right: 0;
+    top: 0;
+
+    @include mobile {
+      width: 100%;
+    }
+
+  }
+
+  &__cont {
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  &__more {
+    display: inline-block;
+    margin-right: 1.4rem;
+    color: #D3BC80;
+    font-family: 'Inter';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 124.2%;
+    text-decoration: underline;
+  }
+
+  &__bg {
+    position: relative;
+    opacity: 0.11;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 110%;
+      height: 12rem;
+      left: 0;
+      background: #FFF;
+      filter: blur(1.5399999618530273rem);
+    }
+
+    &::before {
+      top: -10%;
+    }
+
+    &::after {
+      bottom: -10%;
+    }
+
+    &:nth-child(2) {
+      padding-left: 6rem;
+    }
+
+    &:nth-child(3) {
+      padding-left: 9rem;
+    }
+
+    img {
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 13.4rem;
+    color: #D3BC80;
+    font-family: 'Forum';
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 124.2%;
+    text-transform: uppercase;
+
+    span {
+      color: #000;
+      font-size: 5.5rem;
+
+      @include mobile {
+        font-size: 3.2rem;
+        display: block;
+      }
+    }
+
+    @include mobile {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 7rem;
+    }
+  }
+}
+
+.achiev {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+
+  &:nth-child(2) {
+    .achiev__desc {
+      max-width: 23rem;
+
+      @include mobile {
+        max-width: 25.8rem;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 1.7rem;
+    color: #D3BC80;
+    font-family: "Inter";
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 124.2%;
+    text-transform: uppercase;
+
+    @include mobile {
+      font-size: 2.4rem;
+      margin-bottom: 0.7rem;
+    }
+  }
+
+  &__desc {
+    max-width: 27rem;
+    margin: 0;
+    color: #040404;
+    font-family: 'Forum';
+    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 124.2%;
+
+    @include mobile {
+      max-width: unset;
+      margin-bottom: 1rem;
+    }
+
+
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__image {
+    flex: 1;
+
+    img {
+      width: 100%;
+    }
+  }
+}

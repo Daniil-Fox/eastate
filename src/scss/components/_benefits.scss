@@ -1,0 +1,181 @@
+.benefits {
+  background-image: url('./../img/benefits-bg.webp');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 17.7rem 0 4.3rem;
+  position: relative;
+  margin-bottom: 15rem;
+
+  // margin-top: -12rem;
+  @include mobile {
+    background-image: none;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 9rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.19);
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__card {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    bottom: 0;
+    transform: translateY(70%);
+    background-image: url('./../img/card-bg.webp');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 1.1rem 2.64rem -.6rem rgba(0, 0, 0, 0.25), 0 -2.3rem 3.53rem -1.4rem rgba(0, 0, 0, 0.19);
+
+    @include mobile {
+      left: 0;
+      transform: none;
+      position: relative;
+      margin: 0 3rem;
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 3.2rem;
+
+    @include mobile {
+      flex-direction: column;
+      padding: 0 3rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__item {
+    flex-basis: 30rem;
+
+    // min-height: 26.7rem;
+
+    background-color: #fff;
+    box-shadow: 0 0 3.77rem -.4rem rgba(0, 0, 0, 0.26);
+
+    @include mobile {
+      flex-basis: auto;
+    }
+  }
+}
+
+.benefits-item {
+  position: relative;
+  padding-top: 13.2rem;
+  padding-left: 4rem;
+  padding-right: 1.5rem;
+  padding-bottom: 5.8rem;
+
+  @include mobile {
+    padding-bottom: 3.3rem;
+    padding-left: 4.5rem;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 4rem;
+    top: 5.5rem;
+    width: 4.4rem;
+    height: 4.4rem;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: #BAA264;
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    position: relative;
+    padding-top: 2.5rem;
+    color: #000;
+    font-family: "Inter";
+    font-size: 1.9rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 135.545%;
+
+    @include mobile {
+      font-size: 1.4rem;
+      max-width: 25rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 10.4rem;
+      height: .1rem;
+      background-color: #C1C1C1;
+    }
+  }
+
+
+}
+
+.ben-card {
+  padding-top: 2.6rem;
+  padding-left: 7.2rem;
+  padding-right: 6rem;
+  padding-bottom: 6rem;
+
+  @include mobile {
+    padding: 6rem;
+    padding-top: 3.5rem;
+  }
+
+  &__title {
+    margin: 0;
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include mobile {
+      font-size: 3.6rem;
+    }
+
+    span {
+      font-size: 7.6rem;
+      font-weight: 500;
+
+      @include mobile {
+        font-size: 7rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+}

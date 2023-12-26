@@ -1,0 +1,280 @@
+.hero {
+  position: relative;
+  height: 102.4rem;
+  overflow: hidden;
+
+  background-color: #000;
+
+  @include mobile {
+    height: unset;
+
+  }
+
+  &__cover {
+    position: absolute;
+    padding-top: 25.2rem;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./../img/hero-bg.webp');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    clip-path: circle(10% at 15% 25%);
+
+    @include mobile {
+      clip-path: none;
+      position: relative;
+      padding-bottom: 9rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      // z-index: -1;
+      background: rgba(0, 0, 0, 0.38);
+    }
+  }
+
+  &__header {
+    position: relative;
+    z-index: 5;
+    max-width: 85.1rem;
+    margin-bottom: 3rem;
+
+    opacity: 0;
+
+    @include mobile {
+      opacity: 1;
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    width: 29.1rem;
+
+    @include mobile {
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: #FFF;
+    font-family: 'Vetrino';
+    font-size: 5.9rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 145%;
+    text-transform: uppercase;
+
+    @include mobile {
+      opacity: 1;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__items {
+    position: relative;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 52.8rem;
+    gap: 1.865rem;
+    margin-left: auto;
+
+
+    opacity: 0;
+
+    // transition: opacity .5s ease-in;
+    @include mobile {
+      opacity: 1;
+      grid-template-columns: 1fr;
+    }
+
+    &-col {
+      &:first-child {
+        transform: translateY(-5.8rem);
+
+        @include mobile {
+          transform: unset;
+        }
+      }
+
+      &:last-child {
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+
+
+}
+
+.hero-title {
+  position: relative;
+  z-index: 2;
+
+  @include mobile {
+    text-align: center;
+  }
+
+  .text-row {
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 1.3rem;
+      }
+    }
+  }
+
+  &__left {
+    @include mobile {
+      font-size: 3.2rem;
+      line-height: 145%;
+    }
+
+    .hero-title__bold {
+      @include mobile {
+        display: block;
+        color: #D3BC80;
+        font-size: 2.6rem;
+        line-height: 145%;
+      }
+    }
+  }
+
+  &__right {
+    font-size: 4.5rem;
+    text-align: right;
+
+    @include mobile {
+      text-align: center;
+      font-size: 2.6rem;
+      line-height: 145%;
+    }
+
+    .hero-title__bold {
+      @include mobile {
+        color: #D3BC80;
+        font-size: 3.2rem;
+        line-height: 145%;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 4.2rem;
+
+    @include mobile {
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 145%;
+    }
+
+    .and {
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+}
+
+.hero-item {
+  position: relative;
+  padding-top: 4.4rem;
+  padding-left: 6.3rem;
+  padding-bottom: 3.1rem;
+  border: .1rem solid #BDBDBD;
+  background: linear-gradient(247deg, rgba(247, 247, 247, 0.34) 5.86%, rgba(217, 217, 217, 0.00) 85.27%);
+
+  @include mobile {
+    padding-top: 5rem;
+    padding-left: 6.7rem;
+    padding-bottom: 5rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 3.636rem;
+    top: 0;
+    height: 3.7rem;
+    width: 2.6rem;
+    background-image: url('./../img/flag.svg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__fig {
+    display: inline-block;
+    margin-bottom: 0.2rem;
+    color: var(--accent-color);
+    font-family: "Inter";
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    @include mobile {
+      font-size: 4.8rem;
+    }
+  }
+
+  &__text {
+    display: block;
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+}
+
+
+.hero-welc {
+  position: absolute;
+  left: 33.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  &__title {
+    margin: 0;
+    margin-left: auto;
+    max-width: 78.1rem;
+
+  }
+
+  &__text {
+    display: block;
+    color: #FFF;
+    font-family: 'Vetrino';
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 155%;
+    text-transform: uppercase;
+
+    &:last-child {
+      text-align: right;
+    }
+
+    &>span {
+      color: var(--accent-color);
+    }
+  }
+}

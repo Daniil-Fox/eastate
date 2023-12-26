@@ -1,0 +1,60 @@
+.team {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+
+  @include mobile {
+    padding-top: 0;
+  }
+
+  &__container {
+    position: relative;
+    background-image: url('./../img/team/01.webp');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 63.4rem;
+
+    @include mobile {
+      min-height: 28.2rem;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 2.2rem 4.1rem 4.6rem 3.6rem;
+    background-color: #fff;
+
+    @include mobile {
+      padding: 1.5rem 4.5rem;
+      top: -1.8rem;
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    bottom: -3.5rem;
+    padding: 3.6rem 3.4rem 0 4.7rem;
+    background-color: #fff;
+    max-width: 48.7rem;
+    color: #000;
+    font-family: "Inter";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 169.432%;
+    text-transform: uppercase;
+
+    @include mobile {
+      font-size: 1.3rem;
+      padding: 1.5rem;
+      max-width: 31.3rem;
+      line-height: 120%;
+      bottom: -4rem;
+    }
+  }
+}

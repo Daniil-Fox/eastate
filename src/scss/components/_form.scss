@@ -1,0 +1,61 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__label {
+    &--row {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__policy {
+    color: rgba(56, 56, 56, 0.58);
+    font-family: "Inter";
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 137.361%;
+
+    &>span {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 1.3rem;
+    color: #383838;
+    font-family: "Inter";
+    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 137.361%;
+  }
+
+  &__input {
+    height: 6rem;
+    border: .1rem solid #B9B9B9;
+    padding-left: 1rem;
+  }
+
+  &__btn {
+    margin-bottom: 2rem;
+    width: 29rem;
+
+  }
+
+  &__checkbox {
+    border: none;
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #D7D7D7;
+  }
+}

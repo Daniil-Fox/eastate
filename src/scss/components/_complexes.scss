@@ -1,0 +1,136 @@
+.complexes {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+
+  @include mobile {
+    padding-top: 0;
+  }
+
+  &__title {
+    margin-bottom: 6.5rem;
+
+    @include mobile {
+      margin-bottom: 4.5rem;
+      text-align: center;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+}
+
+.complex {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  height: 44.6rem;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include hover {
+    .complex__title {
+      &::after {
+        top: -3rem;
+      }
+    }
+  }
+
+  @include mobile {
+    height: 38.4rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    margin-bottom: 3.4rem;
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 137.361%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      top: -2.5rem;
+
+      width: 2.3rem;
+      height: 3rem;
+      background-image: url('./../img/arrow-up.svg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      transition: top .3s ease-out;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      // position: absolute;
+      width: 100%;
+      height: 100%;
+
+    }
+  }
+
+  &:nth-child(1) {
+
+    &::after {
+
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 44.85%, rgba(0, 0, 0, 0.51) 96.51%), radial-gradient(76.26% 79.71% at 4.41% 21.86%, rgba(211, 188, 128, 0.64) 0%, rgba(211, 188, 128, 0.00) 100%), linear-gradient(132deg, rgba(0, 0, 0, 0.61) -4.41%, rgba(0, 0, 0, 0.24) 30%, rgba(204, 204, 204, 0.37) 50.82%, rgba(0, 0, 0, 0.38) 67.6%, rgba(0, 0, 0, 0.80) 103.49%);
+    }
+  }
+
+  &:nth-child(2) {
+
+    &::after {
+
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 44.85%, rgba(0, 0, 0, 0.69) 92.61%), radial-gradient(78.91% 81.31% at 81.03% 75.67%, rgba(211, 188, 128, 0.64) 0%, rgba(211, 188, 128, 0.00) 49.07%), linear-gradient(132deg, rgba(0, 0, 0, 0.61) -4.41%, rgba(0, 0, 0, 0.24) 30%, rgba(204, 204, 204, 0.48) 50.82%, rgba(0, 0, 0, 0.38) 67.6%, rgba(0, 0, 0, 0.80) 103.49%);
+    }
+  }
+
+  &:nth-child(3) {
+
+    &::after {
+
+      background: rgba(65, 65, 65, 0.47);
+      backdrop-filter: blur(.4400000095367432rem);
+    }
+  }
+
+  &:nth-child(4) {
+
+    &::after {
+
+      background: rgba(65, 65, 65, 0.47);
+      backdrop-filter: blur(.4400000095367432rem);
+    }
+  }
+}
