@@ -148,6 +148,7 @@ a {
 
 .site-container {
   overflow: hidden;
+  background-color: #fff;
 }
 
 .is-hidden {
