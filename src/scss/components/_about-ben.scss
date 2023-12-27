@@ -126,6 +126,8 @@
     bottom: 0;
     clip-path: 1px solid;
     background-image: url('./../img/angle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &__title {

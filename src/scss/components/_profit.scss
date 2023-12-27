@@ -90,6 +90,8 @@
     height: 5.3rem;
     clip-path: 1px solid;
     background-image: url('./../img/angle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &:nth-child(1),

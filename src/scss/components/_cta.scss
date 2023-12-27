@@ -9,6 +9,45 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  position: relative;
+  overflow: hidden;
+
+  &--neva {
+    background: url('./../img/neva/cta-bg.webp'), lightgray 0px -23.85rem / 100% 170.911% no-repeat;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.61);
+      background-image: url('./../img/neva/cta-cover.webp');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .cta__title {
+      position: relative;
+      z-index: 5;
+      color: #fff;
+    }
+
+    .form {
+      position: relative;
+      z-index: 5;
+    }
+
+    .form__name,
+    .form__policy {
+      color: #fff;
+    }
+
+    .form__input {
+      background-color: transparent;
+      border-color: #fff;
+    }
+  }
+
   @include mobile {
     padding: 0;
     padding-top: 4rem;

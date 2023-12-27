@@ -1,0 +1,88 @@
+.complex-ach {
+  position: relative;
+  min-height: 102.4rem;
+  margin-top: -6rem;
+  margin-bottom: 12rem;
+  display: flex;
+  align-items: center;
+  background-image: url('./../img/neva/ach-bg.webp');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.44);
+  }
+
+  @media (min-width: 1920px) {
+    background-image: url('./../img/neva/ach-bg-2x.webp');
+  }
+
+  &__slider {
+    position: relative;
+    z-index: 5;
+    max-width: 100%;
+
+    .swiper-wrapper {
+      display: flex;
+    }
+
+    .swiper-slide {
+      width: auto;
+      margin: 0 6rem;
+      flex-shrink: 0;
+
+      &--short {
+        max-width: 36rem;
+      }
+
+      &-prev {
+
+        .complex-ach__title,
+        .complex-ach__desc {
+          background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #FFF 105.7%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      &-next {
+
+        .complex-ach__title,
+        .complex-ach__desc {
+          background: linear-gradient(270deg, #FFF 35.32%, rgba(255, 255, 255, 0.00) 105.7%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 2rem;
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 12.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    max-width: 63rem;
+  }
+
+  &__desc {
+    margin: 0;
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 135.545%;
+    max-width: 63rem;
+  }
+}

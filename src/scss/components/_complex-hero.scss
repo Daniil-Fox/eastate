@@ -1,0 +1,31 @@
+.complex-hero {
+  min-height: 102.4rem;
+  padding-top: 30rem;
+  text-align: center;
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 7.2rem;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0 .8rem 1.17rem rgba(0, 0, 0, 0.54);
+    font-family: "Forum";
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 124.2%;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: 0;
+    color: #FFF;
+    text-shadow: 0 .8rem 1.17rem rgba(0, 0, 0, 0.54);
+    font-family: "Vetrino";
+    font-size: 12.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 124.2%;
+    text-transform: uppercase;
+  }
+}

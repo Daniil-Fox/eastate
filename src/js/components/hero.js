@@ -61,18 +61,14 @@ mm.add('(min-width: 769px)', () => {
 
   const aboutTl = gsap.timeline()
   const container = document.querySelector('.about-ben__container')
-
-  aboutTl.to(container, {x : () => -(container.scrollWidth - window.innerWidth), scrollTrigger : {
-    trigger: container,
-    start: 'top top',
-    end: '+=' + container.scrollWidth - window.innerWidth,
-    scrub: 0.5,
-    pin: container,
-    ease: 'none'
-  }})
+  if(container){
+    aboutTl.to(container, {x : () => -(container.scrollWidth - window.innerWidth), scrollTrigger : {
+      trigger: container,
+      start: 'top top',
+      end: '+=' + container.scrollWidth - window.innerWidth,
+      scrub: 0.5,
+      pin: container,
+      ease: 'none'
+    }})
+  }
 })
-
-
-
-
-
