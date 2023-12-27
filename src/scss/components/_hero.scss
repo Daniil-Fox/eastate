@@ -10,6 +10,16 @@
 
   }
 
+  .trigger-line {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 20px;
+    // background-color: red;
+  }
+
   &__cover {
     position: absolute;
     padding-top: 25.2rem;
@@ -190,6 +200,7 @@
   padding-bottom: 3.1rem;
   border: .1rem solid #BDBDBD;
   background: linear-gradient(247deg, rgba(247, 247, 247, 0.34) 5.86%, rgba(217, 217, 217, 0.00) 85.27%);
+  transition: opacity .3s ease-out;
 
   @include mobile {
     padding-top: 5rem;

@@ -1,0 +1,144 @@
+.profit {
+  background-image: url('./../img/profit-bg.webp');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 13.6rem 30rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.59);
+  }
+
+  &__title {
+    margin-bottom: 7rem;
+    position: relative;
+    z-index: 5;
+  }
+
+  &__items {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.prof-item {
+  min-height: 23.5rem;
+  padding: 4.8rem 1.5rem 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #fff;
+  transition: background-color .3s ease-out;
+
+  @include hover {
+    background-color: #fff;
+    justify-content: flex-start;
+
+    .prof-item__text {
+      display: block;
+      opacity: 1;
+    }
+
+    .prof-item__title {
+      opacity: 0;
+      display: none;
+    }
+
+    .prof-item__btn {
+      opacity: 0;
+      display: none;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    display: none;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    align-self: flex-start;
+    text-align: left;
+    color: #000;
+    font-family: 'Inter';
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    display: none;
+    position: absolute;
+    width: 5.3rem;
+    height: 5.3rem;
+    clip-path: 1px solid;
+    background-image: url('./../img/angle.svg');
+  }
+
+  &:nth-child(1),
+  &:nth-child(2) {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: block;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &:nth-child(5) {
+    &::after {
+      display: block;
+      left: 0;
+      bottom: 0;
+      transform: rotate(90deg);
+    }
+
+    &::before {
+      display: block;
+      left: 0;
+      top: 0;
+      transform: rotate(180deg);
+    }
+  }
+
+  &:nth-child(7),
+  &:nth-child(8) {
+    &::after {
+      display: block;
+      top: 0;
+      right: 0;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: #FFF;
+    font-family: 'Montserrat';
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 145%;
+    text-transform: uppercase;
+  }
+}

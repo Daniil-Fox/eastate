@@ -10,6 +10,9 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_hero__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/hero */ "./src/js/components/hero.js");
+/* harmony import */ var _components_about_ben__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/about-ben */ "./src/js/components/about-ben.js");
+/* harmony import */ var _components_about_ben__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_about_ben__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 /***/ }),
@@ -146,6 +149,16 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/about-ben.js":
+/*!****************************************!*\
+  !*** ./src/js/components/about-ben.js ***!
+  \****************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
 /***/ "./src/js/components/hero.js":
 /*!***********************************!*\
   !*** ./src/js/components/hero.js ***!
@@ -165,7 +178,7 @@ mm.add('(min-width: 769px)', () => {
   const timelineText = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline();
   timeline.to('.hero__cover', {
     clipPath: 'circle(100% at 50% 50%)'
-  }).fromTo('.header', {
+  }).fromTo('.header--main', {
     yPercent: -10,
     opacity: 0
   }, {
@@ -182,14 +195,55 @@ mm.add('(min-width: 769px)', () => {
   }, {
     opacity: 1,
     yPercent: 0
+  }).to('.hero__items', {
+    yPercent: -150,
+    ease: 'linear'
   });
   gsap_all__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.create({
     animation: timeline,
-    trigger: '.hero',
+    trigger: '.hero--main',
     start: 'top top',
-    end: '+=200%',
+    end: '+=300%',
     scrub: 1,
-    pin: '.hero'
+    pin: '.hero--main'
+  });
+  const trigger = document.querySelector('.trigger-line');
+  if (trigger) {
+    const items = document.querySelectorAll('.hero-item');
+    const observer = new IntersectionObserver((entries, observer) => {
+      if (entries[0].isIntersecting) {
+        window.addEventListener('scroll', checkLine);
+      } else {
+        window.removeEventListener('scroll', checkLine);
+      }
+    }, {
+      threshold: [0, 0.5, 1]
+    });
+    function checkLine() {
+      items.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const tRect = trigger.getBoundingClientRect();
+        if (rect.y + el.clientHeight / 4 < tRect.y) {
+          el.style.opacity = 0;
+        } else {
+          el.style.opacity = 1;
+        }
+      });
+    }
+    observer.observe(trigger);
+  }
+  const aboutTl = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline();
+  const container = document.querySelector('.about-ben__container');
+  aboutTl.to(container, {
+    x: () => -(container.scrollWidth - window.innerWidth),
+    scrollTrigger: {
+      trigger: container,
+      start: 'top top',
+      end: '+=' + container.scrollWidth - window.innerWidth,
+      scrub: 0.5,
+      pin: container,
+      ease: 'none'
+    }
   });
 });
 

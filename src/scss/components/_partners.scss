@@ -1,0 +1,94 @@
+.partners {
+  padding-bottom: 20rem;
+
+  &__title {
+    padding: 5.5rem 0 3.4rem;
+    background: #FFF;
+    backdrop-filter: blur(3.0299999237060547rem);
+    margin-bottom: 2rem;
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+    height: 12.3rem;
+    padding: 2.6rem 3.2rem;
+    background-color: #D3BC80;
+    border-right: 0.05rem solid rgba(255, 255, 255, 0.40);
+    border-left: 0.05rem solid rgba(255, 255, 255, 0.40);
+
+    svg {
+      position: relative;
+      z-index: 5;
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: #fff;
+      object-fit: cover;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: #fff;
+      transform: translateY(110%);
+      transition: transform .3s ease-out;
+    }
+
+    @include hover {
+      &::before {
+        transform: translateY(0);
+      }
+
+      svg {
+        fill: #D3BC80;
+      }
+    }
+  }
+}
+
+
+
+
+.items-wrap {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+
+  &:not(:last-child) {
+    border-bottom: .1rem solid #fff;
+  }
+}
+
+
+
+.items {
+  flex-shrink: 0;
+  display: flex;
+  min-width: 100%;
+}
+
+.marquee {
+  animation: scroll 20s linear infinite;
+}
+
+.reverce {
+  animation-direction: reverse;
+}
+
+.items-wrap:hover .marquee {
+  animation-play-state: paused;
+}
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
