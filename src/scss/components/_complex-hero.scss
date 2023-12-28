@@ -4,6 +4,8 @@
   text-align: center;
 
   &__subtitle {
+    position: relative;
+    z-index: 4;
     margin: 0;
     margin-bottom: 7.2rem;
     color: #FFF;
@@ -18,6 +20,8 @@
   }
 
   &__title {
+    position: relative;
+    z-index: 4;
     margin: 0;
     color: #FFF;
     text-shadow: 0 .8rem 1.17rem rgba(0, 0, 0, 0.54);

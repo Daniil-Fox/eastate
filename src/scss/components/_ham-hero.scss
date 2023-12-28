@@ -1,0 +1,18 @@
+.ham-hero {
+  background-image: url('./../img/ham/hero-bg.webp');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.40);
+  }
+
+  @media (min-width: 1920px) {
+    background-image: url('./../img/ham/hero-bg-2x.webp');
+  }
+}

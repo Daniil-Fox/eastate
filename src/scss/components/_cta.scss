@@ -3,17 +3,19 @@
   padding: 10rem;
   border-radius: 6rem;
   background: url('./../img/cta-bg.webp'), lightgray 0px -23.85rem / 100% 170.911% no-repeat;
+  background-repeat: no-repeat;
   background-color: #fff;
   box-shadow: 0px 0px 3.32rem .3rem rgba(0, 0, 0, 0.06);
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
 
   position: relative;
   overflow: hidden;
 
-  &--neva {
-    background: url('./../img/neva/cta-bg.webp'), lightgray 0px -23.85rem / 100% 170.911% no-repeat;
+  &--sec {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 
     &::after {
       content: "";
@@ -45,6 +47,33 @@
     .form__input {
       background-color: transparent;
       border-color: #fff;
+      color: #fff;
+    }
+  }
+
+  &--neva {
+    margin-top: 14.2rem;
+    background: url('./../img/neva/cta-bg.webp'), lightgray 0px -23.85rem / 100% 170.911% no-repeat;
+
+    @media (min-width: 1920px) {
+      background: url('./../img/neva/cta-bg-2x.webp'), lightgray 0px -23.85rem / 100% 170.911% no-repeat;
+    }
+
+  }
+
+  &--contacts {
+    background: url('./../img/cta-contacts.webp'), lightgray 0px -23.85rem / 100% 170.911% no-repeat;
+
+    @media (min-width: 1920px) {
+      background: url('./../img/cta-contacts-2x.webp'), lightgray 0px -23.85rem / 100% 170.911% no-repeat;
+    }
+  }
+
+  &--ham {
+    background: url('./../img/cta-ham.webp'), lightgray 0px -23.85rem / 100% 170.911% no-repeat;
+
+    @media (min-width: 1920px) {
+      background: url('./../img/cta-ham-2x.webp'), lightgray 0px -23.85rem / 100% 170.911% no-repeat;
     }
   }
 

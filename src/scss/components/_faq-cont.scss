@@ -1,0 +1,116 @@
+.faq-cont {
+  padding-top: 17rem;
+  padding-bottom: 17rem;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 5rem;
+  }
+
+  &__item {
+    cursor: pointer;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    border-top: .1rem solid #b6b6b6;
+    border-bottom: .1rem solid #b6b6b6;
+
+    &.active {
+      .faq-cont__content {
+        margin-top: 2.4rem;
+        padding-top: 2.4rem;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      .faq-cont__name {
+        &::before {
+          background-image: url('./../img/minus.svg')
+        }
+      }
+    }
+  }
+
+  &__name {
+    position: relative;
+    margin: 0;
+    color: #000;
+    font-family: "Inter";
+    font-size: 1.9rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 145%;
+    text-transform: uppercase;
+    padding-left: 10rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: calc(50%);
+      transform: translateY(-50%);
+      width: 3.2rem;
+      height: 3.2rem;
+      background-image: url('./../img/plus.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__content {
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+
+    padding-left: 10rem;
+    color: #000;
+    font-family: "Inter";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 145%;
+    will-change: max-height;
+
+    transition: max-height .3s ease-out, margin-top .3s ease-out, padding-top .3s ease-out;
+
+    &::before {
+      content: '';
+      position: absolute;
+      opacity: 0;
+      left: 10rem;
+      top: 0;
+      width: 21rem;
+      height: .1rem;
+      background-color: #D3BC80;
+
+      transition: opacity .3s ease-out;
+    }
+  }
+}
+
+.faq-title {
+  &__reg {
+    display: block;
+    color: #000;
+    font-family: "Forum";
+    font-size: 3.7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 124.2%;
+    text-transform: uppercase;
+  }
+
+  &__bold {
+    display: block;
+    color: #D3BC80;
+    font-family: "Forum";
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 124.2%;
+    text-transform: uppercase;
+  }
+}

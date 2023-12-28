@@ -2,13 +2,28 @@
   position: relative;
   min-height: 102.4rem;
   margin-top: -6rem;
-  margin-bottom: 12rem;
   display: flex;
   align-items: center;
-  background-image: url('./../img/neva/ach-bg.webp');
+
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  &--neva {
+    background-image: url('./../img/neva/ach-bg.webp');
+
+    @media (min-width: 1920px) {
+      background-image: url('./../img/neva/ach-bg-2x.webp');
+    }
+  }
+
+  &--ach {
+    background-image: url('./../img/ham/ach01.webp');
+
+    @media (min-width: 1920px) {
+      background-image: url('./../img/ham/ach01-2x.webp');
+    }
+  }
 
   &::after {
     content: "";
@@ -17,9 +32,7 @@
     background: rgba(0, 0, 0, 0.44);
   }
 
-  @media (min-width: 1920px) {
-    background-image: url('./../img/neva/ach-bg-2x.webp');
-  }
+
 
   &__slider {
     position: relative;

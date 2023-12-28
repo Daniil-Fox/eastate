@@ -1,0 +1,61 @@
+.faq-hero {
+
+
+  background-image: url('./../img/faq-bg.webp');
+
+  padding-top: 23.3rem;
+
+  @media (min-width: 1920px) {
+    background-image: url('./../img/faq-bg-2x.webp');
+  }
+
+
+
+}
+
+.sec-hero {
+  position: relative;
+  min-height: 66rem;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(255, 255, 255, 0.63) 100%);
+  }
+
+  &__title {
+    position: relative;
+    z-index: 3;
+    max-width: 60rem;
+    margin: 0;
+    color: #FFF;
+    font-family: "Vetrino";
+    font-size: 6.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 145%;
+    text-transform: uppercase;
+  }
+}
+
+.contacts-hero {
+  padding-top: 27rem;
+  background-image: url('./../img/contacts-hero.webp');
+
+  @media (min-width: 1920px) {
+    background-image: url('./../img/contacts-hero-2x.webp');
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.33);
+  }
+}
