@@ -103,6 +103,24 @@
     @include mobile {
       padding-bottom: 1.7rem;
     }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 9rem;
+      height: .2rem;
+      background-image: url('./../img/dotted.svg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @include mobile {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
   }
 
   &__text {

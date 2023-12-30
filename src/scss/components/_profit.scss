@@ -61,7 +61,7 @@
   border: 1px solid #fff;
   transition: background-color .3s ease-out;
 
-  @include hover {
+  &.active {
     background-color: #fff;
     justify-content: flex-start;
 

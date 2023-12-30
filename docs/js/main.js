@@ -15,6 +15,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ach__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/ach */ "./src/js/components/ach.js");
 /* harmony import */ var _components_accord__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/accord */ "./src/js/components/accord.js");
 /* harmony import */ var _components_accord__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_accord__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_profit__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/profit */ "./src/js/components/profit.js");
+/* harmony import */ var _components_profit__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_profit__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -344,6 +347,27 @@ mm.add('(min-width: 769px)', () => {
       }
     });
   }
+});
+
+/***/ }),
+
+/***/ "./src/js/components/profit.js":
+/*!*************************************!*\
+  !*** ./src/js/components/profit.js ***!
+  \*************************************/
+/***/ (() => {
+
+const profItems = document.querySelectorAll('.prof-item');
+profItems.forEach(el => {
+  el.addEventListener('mouseenter', e => {
+    el.classList.add('active');
+  });
+  el.addEventListener('mouseleave', e => {
+    el.classList.remove('active');
+  });
+  el.addEventListener('click', e => {
+    el.classList.toggle('active');
+  });
 });
 
 /***/ }),

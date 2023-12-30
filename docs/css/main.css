@@ -1979,6 +1979,9 @@ a {
     top: -8.1rem;
   }
 }
+.ach-section__wrapper--2022::before {
+  content: "2022";
+}
 .ach-section__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2147,7 +2150,7 @@ a {
   margin-bottom: 2.5rem;
 }
 .achiev:nth-child(2) .achiev__desc {
-  max-width: 23rem;
+  max-width: 24rem;
 }
 @media (max-width: 768px) {
   .achiev:nth-child(2) .achiev__desc {
@@ -2172,9 +2175,11 @@ a {
   }
 }
 .achiev__desc {
+  position: relative;
+  z-index: 2;
   max-width: 27rem;
   margin: 0;
-  color: #040404;
+  color: #000;
   font-family: "Forum";
   font-size: 1.7rem;
   font-style: normal;
@@ -2718,8 +2723,8 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  width: 76%;
-  height: 90%;
+  width: 64%;
+  height: 75%;
   background-color: #fff;
 }
 .about-info__img--rb {
@@ -2874,25 +2879,23 @@ a {
   -webkit-transition: background-color 0.3s ease-out;
   transition: background-color 0.3s ease-out;
 }
-@media (any-hover: hover) {
-  .prof-item:hover {
-    background-color: #fff;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-  .prof-item:hover .prof-item__text {
-    display: block;
-    opacity: 1;
-  }
-  .prof-item:hover .prof-item__title {
-    opacity: 0;
-    display: none;
-  }
-  .prof-item:hover .prof-item__btn {
-    opacity: 0;
-    display: none;
-  }
+.prof-item.active {
+  background-color: #fff;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.prof-item.active .prof-item__text {
+  display: block;
+  opacity: 1;
+}
+.prof-item.active .prof-item__title {
+  opacity: 0;
+  display: none;
+}
+.prof-item.active .prof-item__btn {
+  opacity: 0;
+  display: none;
 }
 .prof-item__text {
   margin: 0;
@@ -3431,6 +3434,26 @@ a {
 @media (max-width: 768px) {
   .pr-item__title {
     padding-bottom: 1.7rem;
+  }
+}
+.pr-item__title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 9rem;
+  height: 0.2rem;
+  background-image: url("./../img/dotted.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  .pr-item__title::before {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
 .pr-item__text {
