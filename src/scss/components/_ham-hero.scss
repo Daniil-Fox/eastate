@@ -5,6 +5,10 @@
   background-repeat: no-repeat;
   position: relative;
 
+  @include mobile {
+    padding-top: 34.2rem;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -12,7 +16,18 @@
     background: rgba(0, 0, 0, 0.40);
   }
 
-  @media (min-width: 1920px) {
-    background-image: url('./../img/ham/hero-bg-2x.webp');
+
+  .complex-hero__subtitle {
+    @include mobile {
+      font-size: 3.2rem;
+      max-width: unset;
+    }
+  }
+
+  .complex-hero__title {
+    @include mobile {
+      font-size: 4.2rem;
+      line-height: 124.2%;
+    }
   }
 }

@@ -1,5 +1,6 @@
 .about-info {
   position: relative;
+  z-index: 5;
   margin-top: -6rem;
   padding-top: 12rem;
   padding-bottom: 9rem;
@@ -7,16 +8,31 @@
   background: #FFF;
   box-shadow: 0 -2.9rem 7.15rem 0 rgba(223, 223, 223, 0.34), 0 -2.9rem 7.15rem 0 rgba(223, 223, 223, 0.46);
 
+  @include mobile {
+    border-radius: 3rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 12rem 3rem;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 5rem 0;
+    }
 
   }
 
   &__images {
     grid-column: 3 span;
     position: relative;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__img {
@@ -98,12 +114,21 @@
     grid-column: 5 span;
 
     min-height: 37rem;
+
+    @include mobile {
+      grid-column: 1;
+      min-height: unset;
+    }
   }
 }
 
 
 .about-item {
   padding: 2.5rem 0 1.8rem;
+
+  @include mobile {
+    padding: 0;
+  }
 
   &__title {
     margin: 0;
@@ -116,10 +141,18 @@
     line-height: 124.2%;
     text-transform: uppercase;
 
+    @include mobile {
+      font-size: 20px;
+    }
+
     span {
       display: block;
       color: #D3BC80;
       font-size: 5.4rem;
+
+      @include mobile {
+        font-size: 2.4rem;
+      }
     }
   }
 
@@ -134,6 +167,14 @@
 
     &:not(:last-child) {
       margin-bottom: 2rem;
+
+      @include mobile {
+        margin-bottom: .8rem;
+      }
+    }
+
+    @include mobile {
+      font-size: 1.3rem;
     }
   }
 }

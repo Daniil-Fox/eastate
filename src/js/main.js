@@ -4,7 +4,6 @@ import './_functions';
 import './_components';
 
 
-
 if(window.matchMedia('(min-width: 769px)').matches){
   const progressLine = document.querySelector('.progress__line')
 
@@ -36,3 +35,22 @@ closeBtn.addEventListener('click', e => {
   menu.style.transform = null
   document.body.style.overflow = null
 })
+
+
+
+
+$('.ham-gal__item').ripples({
+  resolution: 128,
+  dropRadius: 50,
+  perturbance: 0.01
+});
+$('.ham-item__image').ripples({
+  resolution: 128,
+  dropRadius: 50,
+  perturbance: 0.01
+});
+$('.cta--ham').ripples({
+  resolution: 128,
+  dropRadius: 100,
+  perturbance: 0.01
+});

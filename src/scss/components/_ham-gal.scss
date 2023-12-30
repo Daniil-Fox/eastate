@@ -8,20 +8,41 @@
   background: radial-gradient(41.71% 60.87% at 50% 50%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), linear-gradient(177deg, #FFF 17.97%, #E9E9E9 102.36%);
   box-shadow: 0 -2.9rem 7.6rem 0 rgba(239, 239, 239, 0.52), 0 -2.9rem 7.6rem 0 rgba(223, 223, 223, 0.46);
 
+  @include mobile {
+    padding-top: 12.5rem;
+    border-radius: 4rem;
+    padding-bottom: 8rem;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 13.8rem);
     gap: 2.5rem 3rem;
+
+    @include mobile {
+      display: flex;
+      gap: unset;
+      margin-left: -3rem;
+      margin-right: -3rem;
+    }
   }
 
   &__item {
     grid-row: 3 span;
 
+    @include mobile {
+      height: 43.9rem;
+    }
+
     &:nth-child(1),
     &:nth-child(3),
     &:nth-child(6) {
       grid-row: 2 span;
+
+      @include mobile {
+        grid-row: unset;
+      }
     }
 
     picture,
@@ -29,5 +50,78 @@
       width: 100%;
       height: 100%;
     }
+
+    &:nth-child(1) {
+      background-image: url('./../img/ham/gal/01-2x.webp');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(2) {
+      background-image: url('./../img/ham/gal/02-2x.webp');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(3) {
+      background-image: url('./../img/ham/gal/03-2x.webp');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(4) {
+      background-image: url('./../img/ham/gal/04-2x.webp');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(5) {
+      background-image: url('./../img/ham/gal/06-2x.webp');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(6) {
+      background-image: url('./../img/ham/gal/05-2x.webp');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+
+  &__control {
+    display: none;
+    padding: 3.4rem 0 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+
+    @include mobile {
+      display: flex;
+    }
+  }
+}
+
+
+.ham-gal-button {
+  display: block;
+  width: 3.3rem;
+  height: 3.3rem;
+  transform: rotate(45deg);
+
+  &-prev {
+    border-left: .1rem solid #9B9B9B;
+    border-bottom: .1rem solid #9B9B9B;
+  }
+
+  &-next {
+    border-top: .1rem solid #9B9B9B;
+    border-right: .1rem solid #9B9B9B;
   }
 }

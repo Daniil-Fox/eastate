@@ -3,6 +3,11 @@
   padding-top: 30rem;
   text-align: center;
 
+  @include mobile {
+    min-height: 90rem;
+    padding-top: 21rem;
+  }
+
   &__subtitle {
     position: relative;
     z-index: 4;
@@ -17,6 +22,13 @@
     font-weight: 400;
     line-height: 124.2%;
     text-transform: uppercase;
+
+    @include mobile {
+      margin: 0 auto;
+      margin-bottom: 2.7rem;
+      font-size: 2.4rem;
+      max-width: 20.9rem;
+    }
   }
 
   &__title {
@@ -31,5 +43,9 @@
     font-weight: 400;
     line-height: 124.2%;
     text-transform: uppercase;
+
+    @include mobile {
+      font-size: 4.8rem;
+    }
   }
 }

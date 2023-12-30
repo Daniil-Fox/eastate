@@ -8,14 +8,29 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  @include mobile {
+    padding-top: 9rem;
+    padding-bottom: 4rem;
+  }
+
   &__title {
     margin-bottom: 4rem;
+
+    @include mobile {
+      font-size: 2rem;
+      line-height: 174.2%;
+    }
 
     span {
       display: block;
       padding-left: 8.8rem;
       font-size: 5.4rem;
       line-height: 124.2%;
+
+      @include mobile {
+        font-size: 2.6rem;
+        padding-left: 6rem;
+      }
     }
   }
 
@@ -24,17 +39,30 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 34.5rem);
 
+    @include mobile {
+      grid-template-columns: 1fr;
+      grid-template-rows: unset;
+    }
   }
 
   &__item {
     &--long {
       grid-column: 2 span;
+
+      @include mobile {
+        grid-column: 1;
+      }
+    }
+
+    @include mobile {
+      height: 20.3rem;
     }
   }
 }
 
 .nb-item {
   position: relative;
+  padding-bottom: 1rem;
 
   &--wh {
 
@@ -43,7 +71,11 @@
     padding-right: 5rem;
     background-color: #fff;
 
-
+    @include mobile {
+      padding-top: 4rem;
+      padding-left: 6rem;
+      padding-right: 1rem;
+    }
 
     .nb-item__title {
       padding-bottom: 2rem;
@@ -92,14 +124,29 @@
     padding-left: 5.4rem;
     padding-top: 12.3rem;
 
+    @include mobile {
+      padding-top: 2.8rem;
+      padding-left: 6rem;
+
+      padding-bottom: 1rem;
+    }
+
     .nb-item__title {
       margin: 0;
       color: #FFF;
       font-size: 4rem;
 
+      @include mobile {
+        font-size: 3.6rem;
+      }
+
       span {
         font-size: 7.6rem;
         font-weight: 500;
+
+        @include mobile {
+          font-size: 7rem;
+        }
       }
     }
 
@@ -112,12 +159,22 @@
     padding-top: 13.5rem;
     padding-left: 4rem;
     padding-right: 2rem;
+
+    @include mobile {
+      padding-top: 4rem;
+      padding-left: 6rem;
+      padding-right: 1rem;
+    }
   }
 
   &:nth-child(3) {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include mobile {
+      order: 1;
+    }
 
     .nb-item__title {
       color: #FFF;
@@ -131,11 +188,28 @@
     }
   }
 
+  &:nth-child(6) {
+    @include mobile {
+      order: 4;
+    }
+  }
+
+  &:nth-child(5) {
+    @include mobile {
+      display: none;
+    }
+  }
 
 
   &__img {
     position: absolute;
     inset: 0;
     background-color: #000;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }

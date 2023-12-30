@@ -7,6 +7,11 @@
   background: #FFF;
   box-shadow: 0 -2.9rem 7.15rem 0 rgba(223, 223, 223, 0.34), 0 -2.9rem 7.15rem 0 rgba(223, 223, 223, 0.46);
 
+  @include mobile {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -17,6 +22,10 @@
     height: 17rem;
     background: #FFF;
     filter: blur(4.7150001525878906rem);
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &::after {
@@ -29,6 +38,10 @@
     height: 17rem;
     background: #FFF;
     filter: blur(4.7150001525878906rem);
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__container {
@@ -41,6 +54,13 @@
     padding-left: 30rem;
     will-change: transform;
     transition: linear;
+
+    @include mobile {
+      padding-left: 0;
+      flex-direction: column;
+      background: none;
+      min-height: unset;
+    }
   }
 
   &__title {
@@ -57,8 +77,18 @@
     line-height: 12rem;
     text-transform: uppercase;
 
-    span {
+    @include mobile {
+      margin: 0 auto;
+      margin-bottom: 4rem;
+    }
+
+    &-reg {
       display: block;
+
+
+      @include mobile {
+        display: none;
+      }
 
       &:nth-child(2) {
         padding-left: 6.6rem;
@@ -66,6 +96,21 @@
 
       &:nth-child(4) {
         padding-left: 11rem;
+      }
+    }
+
+    &-mob {
+      display: none;
+      color: #D3BC80;
+      font-family: "Forum";
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 124.2%;
+      text-transform: uppercase;
+
+      @include mobile {
+        display: block;
       }
     }
   }
@@ -76,11 +121,116 @@
     grid-template-columns: repeat(2, 1fr);
     padding-left: 1.2rem;
     padding-right: 10rem;
+
+    @include mobile {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 
 .swiper-slide {
   box-sizing: border-box;
+
+  &:nth-child(1) {
+    .a-ben {
+      @include mobile {
+        &::after {
+          opacity: 1;
+        }
+
+        .a-ben__title {
+          color: #fff;
+        }
+
+        .a-ben__icon {
+          svg {
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    .a-ben {
+      @include mobile {
+        padding-top: 0;
+        padding-top: 12rem;
+        padding-right: 5.5rem;
+      }
+
+      &__icon {
+        @include mobile {
+          bottom: unset;
+          right: unset;
+          left: 2rem;
+          top: 2.5rem;
+        }
+      }
+    }
+
+  }
+
+  &:nth-child(3) {
+    .a-ben {
+      @include mobile {
+        padding-top: 4rem;
+        padding-left: 4rem;
+      }
+
+      &__icon {
+        @include mobile {
+          bottom: 1rem;
+          right: 1rem;
+        }
+      }
+    }
+
+  }
+
+  &:nth-child(4) {
+    .a-ben {
+      @include mobile {
+        &::after {
+          opacity: 1;
+        }
+
+        &::before {
+          left: unset;
+          bottom: unset;
+          top: 0;
+          right: 0;
+          transform: rotate(-90deg);
+        }
+
+        .a-ben__title {
+          color: #fff;
+        }
+
+        .a-ben__icon {
+          svg {
+            fill: #fff;
+          }
+        }
+      }
+
+      @include mobile {
+        padding-top: 6rem;
+        padding-left: 2rem;
+      }
+
+      &__icon {
+        @include mobile {
+          bottom: 0;
+          right: unset;
+          left: 2rem;
+        }
+      }
+    }
+
+  }
+
 }
 
 .a-ben {
@@ -89,6 +239,14 @@
   background: #fff;
   position: relative;
   height: 100%;
+
+  @include mobile {
+    padding: 0;
+    padding-top: 3.6rem;
+    padding-left: 4rem;
+    padding-right: 1rem;
+    min-height: 20.3rem;
+  }
 
   &::after {
     content: "";
@@ -144,6 +302,12 @@
     line-height: 4.3rem;
     text-transform: uppercase;
     transition: color .3s ease-out;
+
+    @include mobile {
+      margin: 0;
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+    }
   }
 
   &__icon {
@@ -161,5 +325,15 @@
       fill: #D3BC80;
       transition: fill .3s ease-out;
     }
+
+    @include mobile {
+      height: 7.3rem;
+      width: 7.3rem;
+      bottom: 1rem;
+      right: 1.5rem;
+    }
   }
+
+
+
 }

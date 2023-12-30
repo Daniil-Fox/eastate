@@ -6,6 +6,20 @@
   padding: 13.6rem 30rem;
   position: relative;
 
+  @media (min-width: 1920px) {
+    background-image: url('./../img/profit-bg-2x.webp');
+  }
+
+  @include mobile {
+    margin-top: -3rem;
+    padding-top: 8rem;
+    padding-bottom: 9rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-image: url('./../img/profit-bg-mob.webp');
+    background-repeat: repeat;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -17,6 +31,8 @@
     margin-bottom: 7rem;
     position: relative;
     z-index: 5;
+
+    margin-bottom: 4.5rem;
   }
 
   &__items {
@@ -25,6 +41,10 @@
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -121,6 +141,20 @@
       top: 0;
       transform: rotate(180deg);
     }
+
+    @include mobile {
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: block;
+        left: unset;
+        right: 0;
+        bottom: 0;
+        transform: none;
+      }
+    }
   }
 
   &:nth-child(7),
@@ -130,6 +164,37 @@
       top: 0;
       right: 0;
       transform: rotate(-90deg);
+
+    }
+
+    @include mobile {
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: block;
+        top: unset;
+        right: unset;
+        right: 0;
+        bottom: 0;
+        transform: none;
+      }
+    }
+  }
+
+  @include mobile {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: block;
+      top: unset;
+      right: unset;
+      right: 0;
+      bottom: 0;
+      transform: none;
     }
   }
 
