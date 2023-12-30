@@ -6,6 +6,25 @@
   position: relative;
   padding-top: 26rem;
 
+  &__front {
+    position: absolute;
+    inset: 0;
+
+    z-index: 6;
+    background-image: url('./../img/about-bg-front.webp');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__clouds {
+    img {
+      width: 100%;
+      height: 100%;
+      margin-left: -40vw;
+    }
+  }
+
   @include mobile {
     padding-top: 20rem;
     padding-bottom: 18rem;
@@ -14,6 +33,7 @@
   &::after {
     content: "";
     position: absolute;
+    z-index: 7;
     inset: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(255, 255, 255, 0.63) 100%);
   }
@@ -21,7 +41,7 @@
   &__title {
     margin: 0;
     position: relative;
-    z-index: 2;
+    z-index: 12;
     color: #FFF;
     font-family: "Vetrino";
     font-size: 6.4rem;

@@ -205,3 +205,24 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+
+.clouds {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  animation: clouds 40s linear infinite;
+  display: flex;
+}
+
+@keyframes clouds {
+  from {
+    transform: translate(-100%, 0);
+  }
+
+  to {
+    transform: translate(0, -25%);
+  }
+
+}
