@@ -759,8 +759,9 @@ a {
 }
 .hero__clouds img {
   width: 100%;
-  height: 100%;
-  margin-left: -40vw;
+  margin-left: -30vw;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 .hero .trigger-line {
   position: absolute;
@@ -791,6 +792,10 @@ a {
   position: absolute;
   inset: 0;
   z-index: 6;
+  background-image: url("./../img/hero-bg-front.webp");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 @media (max-width: 768px) {
   .hero__cover {

@@ -13,9 +13,10 @@
   &__clouds {
 
     img {
+
       width: 100%;
-      height: 100%;
-      margin-left: -40vw;
+      margin-left: -30vw;
+      object-fit: contain;
     }
   }
 
@@ -47,6 +48,10 @@
       position: absolute;
       inset: 0;
       z-index: 6;
+      background-image: url('./../img/hero-bg-front.webp');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     @include mobile {
