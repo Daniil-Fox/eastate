@@ -104,6 +104,13 @@
   font-display: swap;
   font-style: normal;
 }
+@font-face {
+  font-family: "Iowan Old Style";
+  src: url("../fonts/../fonts/Iowan-Old-Style-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -348,6 +355,70 @@ a {
     transform: translate(0, -25%);
   }
 }
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .logo {
+    gap: 1.2rem;
+  }
+}
+.logo__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.logo__name {
+  color: #fff;
+  font-family: "Iowan Old Style";
+  font-size: 3.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.094rem;
+}
+@media (max-width: 768px) {
+  .logo__name {
+    font-size: 2.3rem;
+    letter-spacing: -0.04rem;
+  }
+}
+.logo__desc {
+  color: #FFF;
+  font-family: "Inter";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.224rem;
+}
+@media (max-width: 768px) {
+  .logo__desc {
+    font-size: 1.2rem;
+    letter-spacing: 0.12rem;
+  }
+}
+.logo img {
+  width: 8rem;
+  height: 8rem;
+}
+@media (max-width: 768px) {
+  .logo img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
 .header {
   position: absolute;
   z-index: 20;
@@ -408,6 +479,11 @@ a {
     letter-spacing: normal;
     margin-right: 0.7rem;
   }
+}
+.header__logo svg {
+  stroke: #fff;
+  fill: none;
+  border-radius: 100%;
 }
 .header__desc {
   margin: 0;
@@ -470,6 +546,10 @@ a {
 }
 .header--dark .header__desc {
   color: #898989;
+}
+.header--dark .logo__name,
+.header--dark .logo__desc {
+  color: #181818;
 }
 .header--dark .social__link svg {
   fill: #fff !important;

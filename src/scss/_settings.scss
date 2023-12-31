@@ -226,3 +226,58 @@ a {
   }
 
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  @include mobile {
+    gap: 1.2rem;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    color: #fff;
+    font-family: "Iowan Old Style";
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.094rem;
+
+    @include mobile {
+      font-size: 2.3rem;
+      letter-spacing: -0.04rem;
+    }
+  }
+
+  &__desc {
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.224rem;
+
+    @include mobile {
+      font-size: 1.2rem;
+      letter-spacing: 0.12rem;
+    }
+  }
+
+  img {
+    width: 8rem;
+    height: 8rem;
+
+    @include mobile {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+}

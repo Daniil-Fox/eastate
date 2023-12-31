@@ -50,6 +50,12 @@
       letter-spacing: normal;
       margin-right: 0.7rem;
     }
+
+    svg {
+      stroke: #fff;
+      fill: none;
+      border-radius: 100%;
+    }
   }
 
   &__desc {
@@ -117,6 +123,11 @@
       }
 
 
+    }
+
+    .logo__name,
+    .logo__desc {
+      color: #181818;
     }
 
     .social__link {
