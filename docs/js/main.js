@@ -22952,6 +22952,16 @@ $('.ham-item__image').ripples({
   dropRadius: 50,
   perturbance: 0.01
 });
+$('.ripple').ripples({
+  resolution: 128,
+  dropRadius: 60,
+  perturbance: 0.001
+});
+$('.achiev__image-rip').ripples({
+  resolution: 128,
+  dropRadius: 60,
+  perturbance: 0.04
+});
 $('.cta--ham').ripples({
   resolution: 128,
   dropRadius: 100,
