@@ -25,18 +25,27 @@
       background: linear-gradient(90deg, #FFF 0.1%, rgba(255, 255, 255, 0.00) 72.27%);
     }
 
+    &:last-child {
+      flex: 1;
+      background-image: url('./../img/neva/desc02-2x.webp');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
     &:nth-child(1) {
       flex-basis: 75.7rem;
+      background-image: url('./../img/neva/desc01-2x.webp');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
 
       &::before {
         background: linear-gradient(268deg, #FFF 1.61%, rgba(196, 196, 196, 0.00) 88.68%);
       }
     }
 
-    img {
-      width: 100%;
-      height: 100%;
-    }
+
   }
 
   &__content {

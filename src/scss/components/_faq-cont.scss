@@ -98,6 +98,7 @@
     will-change: max-height;
 
     transition: max-height .3s ease-out, margin-top .3s ease-out, padding-top .3s ease-out;
+    box-sizing: content-box;
 
     @include mobile {
       padding-left: 0;

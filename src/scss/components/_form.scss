@@ -23,7 +23,7 @@
     font-weight: 400;
     line-height: 137.361%;
 
-    &>span {
+    &>a {
       color: inherit;
       text-decoration: underline;
     }
@@ -57,5 +57,7 @@
     width: 2.2rem;
     height: 2.2rem;
     background-color: #D7D7D7;
+
+    cursor: pointer;
   }
 }

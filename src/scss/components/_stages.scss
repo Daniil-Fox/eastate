@@ -32,9 +32,17 @@
     counter-increment: counter;
     display: flex;
     align-items: center;
+    transition: transform .3s ease-out;
 
+    @include hover {
+      transform: translateY(-3rem);
 
-
+      &::before {
+        z-index: 2;
+        left: 0;
+        transform: translateX(-80%) !important;
+      }
+    }
 
     &:not(:first-child) {
       left: -5rem;
@@ -56,6 +64,7 @@
       font-style: normal;
       font-weight: 500;
       line-height: 137.361%;
+      transition: transform .3s ease-out, z-index .3s ease-out;
 
       @include mobile {
         font-size: 12.8rem;

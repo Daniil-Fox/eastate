@@ -1,8 +1,19 @@
 import './_vendor';
-import vars from './_vars';
-import './_functions';
 import './_components';
+import Rellax from 'rellax';
 
+
+window.addEventListener('DOMContentLoaded', () => {
+  if(document.querySelector('.rellax') && window.matchMedia('(min-width: 769px)').matches){
+    const rellax = new Rellax('.rellax', {
+      center: true,
+      speed: 0.8
+    })
+    window.addEventListener('resize', () => {
+      rellax.refresh()
+    })
+  }
+})
 
 if(window.matchMedia('(min-width: 769px)').matches){
   const progressLine = document.querySelector('.progress__line')
@@ -22,8 +33,6 @@ if(window.matchMedia('(min-width: 769px)').matches){
 const menu = document.querySelector('.menu')
 const burger = document.querySelector('.header__burger')
 const closeBtn = document.querySelector('.menu__close')
-const header = document.querySelector('.header')
-const heroHeader = document.querySelector('.hero__nav')
 burger.addEventListener('click', e => {
   e.preventDefault()
   menu.style.transform = 'translateX(0)'
@@ -48,6 +57,16 @@ $('.ham-item__image').ripples({
   resolution: 128,
   dropRadius: 50,
   perturbance: 0.01
+});
+$('.ripple').ripples({
+  resolution: 128,
+  dropRadius: 60,
+  perturbance: 0.02
+});
+$('.achiev__image-rip').ripples({
+  resolution: 128,
+  dropRadius: 60,
+  perturbance: 0.04
 });
 $('.cta--ham').ripples({
   resolution: 128,

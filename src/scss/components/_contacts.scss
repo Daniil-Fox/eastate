@@ -11,6 +11,17 @@
     min-height: 43rem;
   }
 
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      margin-bottom: 4rem;
+    }
+  }
+
   .menu__add {
     @include mobile {
       display: block;
@@ -68,7 +79,7 @@
 
   &--cont {
     position: relative;
-    z-index: 5;
+    z-index: 10;
     margin-top: -5.4rem;
     background-color: #fff;
     border-radius: 6rem;
@@ -116,4 +127,10 @@
       background: rgba(112, 118, 122, 0.89);
     }
   }
+}
+
+
+#map {
+  width: 100%;
+  aspect-ratio: 1 / 1;
 }

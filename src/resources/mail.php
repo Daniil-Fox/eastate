@@ -33,12 +33,12 @@ try {
 
   // Настройки вашей почты
   $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-  $mail->Username   = ''; // Логин на почте
-  $mail->Password   = ''; // Пароль на почте
+  $mail->Username   = 'foxones80@gmail.com'; // Логин на почте
+  $mail->Password   = 'rlqo soes omgt mzug'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('foxones80@gmail.com', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
   $mail->addAddress('');
@@ -63,7 +63,16 @@ try {
   $mail->Body = $body;
 
   $mail->send();
+//  https://api.telegram.org/bot6550075081:AAFPKB2h3jFq0Q79Heo1dfhp-I15pLUVRwU/getUpdates,
+  $token = "6550075081:AAFPKB2h3jFq0Q79Heo1dfhp-I15pLUVRwU";
+  $chat_id = "-6550075081:AAFPKB2h3jFq0Q79Heo1dfhp-I15pLUVRwU";
 
+  foreach ( $_POST as $key => $value ) {
+    if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+      $txt .= $key . "    " . $value ."\n";
+    }
+  }
+  $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
 } catch (Exception $e) {
   $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }

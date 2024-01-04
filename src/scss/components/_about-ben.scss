@@ -9,7 +9,7 @@
 
   @include mobile {
     padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-bottom: 0;
   }
 
   &::before {
@@ -118,13 +118,16 @@
   &__wrapper {
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 50vh);
     padding-left: 1.2rem;
     padding-right: 10rem;
 
     @include mobile {
       padding-left: 0;
       padding-right: 0;
+      grid-template-rows: unset;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
@@ -132,7 +135,8 @@
 .swiper-slide {
   box-sizing: border-box;
 
-  &:nth-child(1) {
+  &:nth-child(1),
+  &:nth-child(5) {
     .a-ben {
       @include mobile {
         &::after {
@@ -152,44 +156,8 @@
     }
   }
 
-  &:nth-child(2) {
-    .a-ben {
-      @include mobile {
-        padding-top: 0;
-        padding-top: 12rem;
-        padding-right: 5.5rem;
-      }
-
-      &__icon {
-        @include mobile {
-          bottom: unset;
-          right: unset;
-          left: 2rem;
-          top: 2.5rem;
-        }
-      }
-    }
-
-  }
-
-  &:nth-child(3) {
-    .a-ben {
-      @include mobile {
-        padding-top: 4rem;
-        padding-left: 4rem;
-      }
-
-      &__icon {
-        @include mobile {
-          bottom: 1rem;
-          right: 1rem;
-        }
-      }
-    }
-
-  }
-
-  &:nth-child(4) {
+  &:nth-child(4),
+  &:nth-child(8) {
     .a-ben {
       @include mobile {
         &::after {
@@ -231,6 +199,21 @@
 
   }
 
+
+  &:nth-child(even) {
+    @include mobile {
+      .a-ben {
+        padding-top: 12rem;
+        padding-left: 2.1rem;
+
+        &__icon {
+          top: 2.5rem;
+          left: 2.5rem;
+        }
+      }
+    }
+  }
+
 }
 
 .a-ben {
@@ -246,6 +229,7 @@
     padding-left: 4rem;
     padding-right: 1rem;
     min-height: 20.3rem;
+    border: none;
   }
 
   &::after {
@@ -255,6 +239,7 @@
     opacity: 0;
     background-image: linear-gradient(139deg, #ECD494 1.86%, #F5E2AF 47.73%, #E3CD92 100%);
     transition: opacity .3s ease-out;
+
   }
 
   @include hover {
@@ -292,7 +277,6 @@
     position: relative;
     z-index: 4;
     margin: 0;
-    margin-top: 2rem;
     color: #D3BC80;
     text-shadow: 0 .4rem 8.26rem rgba(154, 154, 154, 0.08);
     font-family: "Inter";
@@ -305,7 +289,7 @@
 
     @include mobile {
       margin: 0;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       line-height: 2.2rem;
     }
   }

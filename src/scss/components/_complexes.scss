@@ -92,45 +92,69 @@
     width: 100%;
     height: 100%;
 
-    img {
-      // position: absolute;
-      width: 100%;
-      height: 100%;
+    background-position: center, center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
-    }
+
   }
 
   &:nth-child(1) {
+    .complex__img {
+      background-image: url('./../img/complexes/01.webp');
 
-    &::after {
-
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 44.85%, rgba(0, 0, 0, 0.51) 96.51%), radial-gradient(76.26% 79.71% at 4.41% 21.86%, rgba(211, 188, 128, 0.64) 0%, rgba(211, 188, 128, 0.00) 100%), linear-gradient(132deg, rgba(0, 0, 0, 0.61) -4.41%, rgba(0, 0, 0, 0.24) 30%, rgba(204, 204, 204, 0.37) 50.82%, rgba(0, 0, 0, 0.38) 67.6%, rgba(0, 0, 0, 0.80) 103.49%);
+      &-cover {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 44.85%, rgba(0, 0, 0, 0.51) 96.51%), radial-gradient(76.26% 79.71% at 4.41% 21.86%, rgba(211, 188, 128, 0.64) 0%, rgba(211, 188, 128, 0.00) 100%), linear-gradient(132deg, rgba(0, 0, 0, 0.61) -4.41%, rgba(0, 0, 0, 0.24) 30%, rgba(204, 204, 204, 0.37) 50.82%, rgba(0, 0, 0, 0.38) 67.6%, rgba(0, 0, 0, 0.80) 103.49%);
+      }
     }
+
   }
 
   &:nth-child(2) {
+    .complex__img {
+      background-image: url('./../img/complexes/02.webp');
 
-    &::after {
-
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 44.85%, rgba(0, 0, 0, 0.69) 92.61%), radial-gradient(78.91% 81.31% at 81.03% 75.67%, rgba(211, 188, 128, 0.64) 0%, rgba(211, 188, 128, 0.00) 49.07%), linear-gradient(132deg, rgba(0, 0, 0, 0.61) -4.41%, rgba(0, 0, 0, 0.24) 30%, rgba(204, 204, 204, 0.48) 50.82%, rgba(0, 0, 0, 0.38) 67.6%, rgba(0, 0, 0, 0.80) 103.49%);
+      &-cover {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 44.85%, rgba(0, 0, 0, 0.51) 96.51%), radial-gradient(76.26% 79.71% at 4.41% 21.86%, rgba(211, 188, 128, 0.64) 0%, rgba(211, 188, 128, 0.00) 100%), linear-gradient(132deg, rgba(0, 0, 0, 0.61) -4.41%, rgba(0, 0, 0, 0.24) 30%, rgba(204, 204, 204, 0.37) 50.82%, rgba(0, 0, 0, 0.38) 67.6%, rgba(0, 0, 0, 0.80) 103.49%);
+      }
     }
+
   }
 
   &:nth-child(3) {
+    .complex__img {
+      background-image: url('./../img/complexes/03.webp');
 
-    &::after {
-
-      background: rgba(65, 65, 65, 0.47);
-      backdrop-filter: blur(.4400000095367432rem);
+      &-cover {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: rgba(65, 65, 65, 0.47);
+        backdrop-filter: blur(.4400000095367432rem);
+      }
     }
+
   }
 
   &:nth-child(4) {
+    .complex__img {
+      background-image: url('./../img/complexes/04.webp');
 
-    &::after {
-
-      background: rgba(65, 65, 65, 0.47);
-      backdrop-filter: blur(.4400000095367432rem);
+      &-cover {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: rgba(65, 65, 65, 0.47);
+        backdrop-filter: blur(.4400000095367432rem);
+      }
     }
+
+
   }
 }

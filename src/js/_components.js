@@ -1,5 +1,6 @@
-import './components/hero'
 import './components/about-ben'
-import './components/ach'
+import './components/ach.js'
 import './components/accord'
 import './components/profit'
+import './components/send-mail'
+import './components/hero.js'

@@ -30,8 +30,7 @@
     position: absolute;
     z-index: 1;
     left: 50%;
-    bottom: 0;
-    transform: translateY(70%);
+    bottom: -25%;
     background-image: url('./../img/card-bg.webp');
     background-position: center center;
     background-size: cover;
@@ -40,6 +39,7 @@
 
     @include mobile {
       left: 0;
+      bottom: 0;
       transform: none;
       position: relative;
       margin: 0 3rem;

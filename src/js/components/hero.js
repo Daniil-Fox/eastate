@@ -7,23 +7,25 @@ const mm = gsap.matchMedia()
 
 mm.add('(min-width: 769px)', () => {
   const timeline = gsap.timeline()
-  const timelineText = gsap.timeline()
+
 
   timeline
   .to('.hero__cover', {clipPath: 'circle(100% at 50% 50%)'})
-  .fromTo('.header--main', {yPercent: -10, opacity: 0}, {opacity: '1', yPercent: 0})
-  .fromTo('.hero__header', {yPercent: 10}, {opacity: '1', yPercent: 0})
-  .fromTo('.hero__items', {yPercent: 15, opacity: 0}, {opacity: 1, yPercent: 0})
-  .to('.hero__items', {yPercent: -150, ease: 'linear'})
+  .to('.header--main', {opacity: 1, yPercent: 0})
+  .to('.hero__header', {opacity: 1, yPercent: 0})
+  .to('.hero__items', {opacity: 1, yPercent: 0})
+  .to('.hero__items', {yPercent: -150})
 
 
   ScrollTrigger.create({
     animation: timeline,
-    trigger: '.hero--main',
+    trigger: '.g-wrap',
     start: 'top top',
     end: '+=300%',
-    scrub: 1,
-    pin: '.hero--main'
+    endTrigger: '.mission',
+    scrub: 0.5,
+    pin: true,
+    ease: 'linear'
   })
 
 
@@ -33,8 +35,6 @@ mm.add('(min-width: 769px)', () => {
     const observer = new IntersectionObserver((entries, observer) => {
       if(entries[0].isIntersecting){
         window.addEventListener('scroll', checkLine)
-      } else {
-        window.removeEventListener('scroll', checkLine)
       }
     }, {
       threshold: [0, 0.5, 1]
@@ -72,3 +72,4 @@ mm.add('(min-width: 769px)', () => {
     }})
   }
 })
+console.log("hero");

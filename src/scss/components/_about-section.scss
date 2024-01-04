@@ -94,6 +94,17 @@
     display: flex;
     align-items: baseline;
     gap: .7rem;
+
+    &:last-child {
+      .a-title__bold {
+        font-size: 5.2rem;
+
+        @include mobile {
+          font-size: 3.2rem;
+        }
+
+      }
+    }
   }
 
   &__reg {
@@ -133,7 +144,6 @@
     }
 
     &:first-child {
-
       line-height: 174.5%;
 
 

@@ -31,7 +31,7 @@
   }
 
   &__cover {
-    position: absolute;
+    position: relative;
     padding-top: 25.2rem;
     z-index: 5;
     left: 0;
@@ -43,6 +43,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     clip-path: circle(10% at 15% 25%);
+    will-change: clip-path;
 
     &-front {
       position: absolute;
@@ -52,29 +53,37 @@
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
+
+      @include mobile {
+        display: none;
+      }
     }
 
     @include mobile {
       clip-path: none;
       position: relative;
       padding-bottom: 9rem;
+      background-image: url('./../img/hero-bg-mob.webp');
+      background-position: top;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        // z-index: -1;
+        background: rgba(0, 0, 0, 0.38);
+      }
     }
 
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   inset: 0;
-    //   // z-index: -1;
-    //   background: rgba(0, 0, 0, 0.38);
-    // }
+
   }
 
   &__header {
     position: relative;
-    z-index: 5;
+    z-index: 13;
     max-width: 85.1rem;
     margin-bottom: 3rem;
-
+    transform: translateY(10%);
     opacity: 0;
 
     @include mobile {
@@ -116,10 +125,9 @@
     gap: 1.865rem;
     margin-left: auto;
 
-
+    transform: translateY(15%);
     opacity: 0;
 
-    // transition: opacity .5s ease-in;
     @include mobile {
       opacity: 1;
       grid-template-columns: 1fr;
@@ -220,7 +228,7 @@
   padding-bottom: 3.1rem;
   border: .1rem solid #BDBDBD;
   background: linear-gradient(247deg, rgba(247, 247, 247, 0.34) 5.86%, rgba(217, 217, 217, 0.00) 85.27%);
-  transition: opacity .3s ease-out;
+  transition: opacity .3s linear;
 
   @include mobile {
     padding-top: 5rem;

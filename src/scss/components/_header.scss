@@ -175,3 +175,15 @@
     }
   }
 }
+
+
+.header--main {
+  opacity: 0;
+  transform: translateY(-10%);
+
+  @include mobile {
+    transform: none;
+    opacity: 1;
+  }
+
+}

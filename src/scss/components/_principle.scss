@@ -7,8 +7,9 @@
   background-repeat: no-repeat;
 
   @include mobile {
-    padding-top: 0;
+    padding-top: 8rem;
     padding-bottom: 0;
+    background-position: top;
   }
 
   &__title {
@@ -39,12 +40,13 @@
     padding-right: 2rem;
     padding-left: 2rem;
     padding-bottom: 4rem;
+    margin-bottom: 4rem;
+
   }
 
   &::after {
     content: "";
     position: absolute;
-    z-index: 1;
     inset: 0;
     opacity: 0.8;
     background: #FFF;
@@ -53,14 +55,33 @@
 
   &:not(:nth-child(3n)) {
     border-right: .1rem solid rgba(211, 188, 128, 0.29);
-    ;
+
+    @include mobile {
+      border: none;
+    }
   }
 
   &:nth-child(1),
   &:nth-child(2),
   &:nth-child(3) {
     border-bottom: .1rem solid rgba(211, 188, 128, 0.29);
-    ;
+
+    @include mobile {
+      border: none;
+    }
+  }
+
+  @include mobile {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 29.5rem;
+      height: .1rem;
+      background-color: rgba(211, 188, 128, 0.29);
+    }
   }
 
   &__icon {

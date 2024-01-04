@@ -46,21 +46,38 @@
     &--first {
       height: 82.4%;
       width: 73.75%;
+      background-image: url('./../img/about/03.webp');
+      background-position: center, center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     &--second {
       width: 76%;
       height: 78%;
+
+      background-image: url('./../img/about/02.webp');
+      background-position: center, center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     &--first-small {
       width: 51.5%;
       height: 50.8%;
+      background-image: url('./../img/about/01.webp');
+      background-position: center, center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     &--second-small {
       width: 48.5%;
       height: 61%;
+      background-image: url('./../img/about/04.webp');
+      background-position: center, center;
+      background-size: cover;
+      background-repeat: no-repeat;
 
     }
 
